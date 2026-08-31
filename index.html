@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patanisha — Sera ya Faragha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root{--navy:#0F1B2D;--navy-mid:#1B3A6B;--gold:#C9A84C;--gold-soft:#E8D5A0;--bg:#F7F8FA;--card:#FFF;--text:#1E293B;--text2:#64748B;--border:#E8ECF2}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.75;-webkit-font-smoothing:antialiased}
+        .hero{background:var(--navy);position:relative;overflow:hidden;padding:70px 24px 50px;text-align:center}
+        .hero::before{content:'';position:absolute;top:-50%;right:-30%;width:600px;height:600px;background:radial-gradient(circle,rgba(27,58,107,.8) 0%,transparent 70%)}
+        .hero::after{content:'';position:absolute;bottom:-40%;left:-20%;width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,.12) 0%,transparent 70%)}
+        .hero-logo{width:56px;height:56px;background:linear-gradient(135deg,var(--gold),var(--gold-soft));border-radius:14px;display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px;box-shadow:0 8px 32px rgba(201,168,76,.25)}
+        .hero-logo svg{width:28px;height:28px;fill:var(--navy)}
+        .hero h1{font-size:32px;font-weight:900;color:#fff;letter-spacing:-.5px;margin-bottom:8px;position:relative}
+        .hero-sub{font-size:15px;color:rgba(255,255,255,.5);font-weight:500;margin-bottom:24px;position:relative}
+        .lang-toggle{display:inline-flex;background:rgba(255,255,255,.08);border-radius:10px;padding:3px;position:relative;backdrop-filter:blur(10px)}
+        .lang-btn{padding:8px 22px;border:none;border-radius:8px;font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;transition:all .25s;background:transparent;color:rgba(255,255,255,.45)}
+        .lang-btn.active{background:rgba(255,255,255,.15);color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+        .wrap{max-width:680px;margin:0 auto;padding:32px 20px 60px}
+        .updated{text-align:center;margin-bottom:28px}
+        .updated span{display:inline-block;font-size:12px;font-weight:600;color:var(--navy-mid);background:rgba(27,58,107,.06);padding:6px 16px;border-radius:20px}
+        .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:14px;transition:box-shadow .2s}
+        .card:hover{box-shadow:0 4px 20px rgba(15,27,45,.06)}
+        .card-header{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+        .card-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+        .card-icon.blue{background:rgba(27,58,107,.08)}.card-icon.green{background:rgba(16,185,129,.08)}.card-icon.gold{background:rgba(201,168,76,.1)}.card-icon.red{background:rgba(239,68,68,.06)}.card-icon.purple{background:rgba(124,58,237,.06)}
+        .card h2{font-size:17px;font-weight:700;color:var(--navy);letter-spacing:-.2px}
+        .card p{font-size:14px;color:var(--text2);margin-bottom:10px;line-height:1.7}.card p:last-child{margin-bottom:0}
+        .card ul{list-style:none;padding:0}
+        .card li{font-size:14px;color:var(--text2);padding:7px 0 7px 24px;position:relative;line-height:1.6}
+        .card li::before{content:'';position:absolute;left:0;top:14px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+        .card li strong{color:var(--text);font-weight:600}
+        .contact-row{display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(27,58,107,.04);border-radius:10px;margin-top:8px}
+        .contact-row+.contact-row{margin-top:6px}
+        .contact-icon{width:32px;height:32px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+        .contact-icon svg{width:14px;height:14px;fill:#fff}
+        .contact-text{font-size:14px;font-weight:500;color:var(--text)}
+        .contact-text a{color:var(--navy-mid);text-decoration:none}
+        .footer{text-align:center;padding:20px;border-top:1px solid var(--border);margin-top:20px}
+        .footer p{font-size:12px;color:var(--text2);margin-bottom:4px}
+        .footer-brand{font-weight:700;color:var(--navy-mid)}
+        [data-lang="en"]{display:none}
+        @media(max-width:480px){.hero{padding:50px 20px 36px}.hero h1{font-size:26px}.card{padding:22px}.wrap{padding:24px 16px 40px}}
+    </style>
+</head>
+<body>
+<header class="hero">
+    <div class="hero-logo"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div>
+    <h1>Patanisha</h1>
+    <p class="hero-sub">Sera ya Faragha · Privacy Policy</p>
+    <div class="lang-toggle">
+        <button class="lang-btn active" onclick="switchLang('sw')">Kiswahili</button>
+        <button class="lang-btn" onclick="switchLang('en')">English</button>
+    </div>
+</header>
+<main class="wrap" data-lang="sw">
+    <div class="updated"><span>Imesasishwa Agosti 2026</span></div>
+    <div class="card"><div class="card-header"><div class="card-icon blue">📋</div><h2>Utangulizi</h2></div><p>Patanisha ni jukwaa la mali isiyohamishika nchini Tanzania linalomilikiwa na OmmyTech. Sera hii inaelezea jinsi tunavyokusanya, kutumia, na kulinda taarifa zako unapotumia app yetu.</p></div>
+    <div class="card"><div class="card-header"><div class="card-icon purple">📱</div><h2>Taarifa tunazokusanya</h2></div><ul><li><strong>Taarifa za akaunti</strong> — jina, namba ya simu, barua pepe, picha ya wasifu</li><li><strong>Taarifa za mali</strong> — picha, maelezo, bei, na eneo la mali unayoiweka</li><li><strong>Ujumbe</strong> — mazungumzo kati yako na watumiaji wengine</li><li><strong>Eneo</strong> — mkoa, wilaya, na kata unazochagua kwenye wasifu wako</li><li><strong>Taarifa za kifaa</strong> — aina ya kifaa na mfumo (kwa kuboresha app)</li></ul></div>
+    <div class="card"><div class="card-header"><div class="card-icon gold">🎯</div><h2>Matumizi ya taarifa zako</h2></div><ul><li>Kutengeneza na kusimamia akaunti yako</li><li>Kuonyesha mali na madalali karibu nawe</li><li>Kuwezesha mawasiliano kati ya wanunuzi na madalali</li><li>Kuboresha huduma zetu na uzoefu wa app</li><li>Kutuma arifa muhimu kuhusu akaunti yako</li></ul></div>
+    <div class="card"><div class="card-header"><div class="card-icon green">🔒</div><h2>Usalama wa taarifa</h2></div><p>Tunatumia Firebase ya Google kuhifadhi taarifa zako kwa usalama wa hali ya juu.</p><ul><li>Uthibitisho wa Firebase Authentication</li><li>Sheria za usalama za Firestore</li><li>Uhifadhi salama wa picha kwenye Firebase Storage</li><li>Mawasiliano yaliyosimbwa kwa njia ya SSL/TLS</li></ul></div>
+    <div class="card"><div class="card-header"><div class="card-icon blue">🤝</div><h2>Kushiriki taarifa</h2></div><p>Hatushiriki wala kuuza taarifa zako kwa mtu yeyote wa nje. Taarifa zako zinaonekana tu kwa watumiaji wengine wa Patanisha kama jina lako, picha, mali ulizoweka, na eneo lako. Mazungumzo yako yanaonekana tu na mtu unayeongea naye.</p></div>
+    <div class="card"><div class="card-header"><div class="card-icon gold">⚙️</div><h2>Haki zako</h2></div><ul><li><strong>Kuhariri</strong> — badilisha taarifa zako wakati wowote kwenye wasifu wako</li><li><strong>Kufuta akaunti</strong> — futa akaunti yako kabisa kupitia mipangilio</li><li><strong>Kuondoa mali</strong> — ondoa mali zako wakati wowote</li></ul></div>
+    <div class="card"><div class="card-header"><div class="card-icon red">👶</div><h2>Watoto</h2></div><p>Patanisha haikusudiwi kutumiwa na watoto chini ya miaka 18. Hatukusanyi taarifa za watoto kwa makusudi.</p></div>
+    <div class="card"><div class="card-header"><div class="card-icon green">📧</div><h2>Wasiliana nasi</h2></div><p>Kwa maswali kuhusu sera hii, wasiliana nasi kupitia njia hizi:</p><div class="contact-row"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div><span class="contact-text"><a href="mailto:ommytech97@gmail.com">ommytech97@gmail.com</a></span></div><div class="contact-row"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><span class="contact-text">OmmyTech — Dar es Salaam, Tanzania</span></div></div>
+</main>
+<main class="wrap" data-lang="en">
+    <div class="updated"><span>Updated August 2026</span></div>
+    <div class="card"><div class="card-header"><div class="card-icon blue">📋</div><h2>Introduction</h2></div><p>Patanisha is a real estate platform in Tanzania operated by OmmyTech. This policy describes how we collect, use, and protect your information when you use our app.</p></div>
+    <div class="card"><div class="card-header"><div class="card-icon purple">📱</div><h2>Information we collect</h2></div><ul><li><strong>Account information</strong> — name, phone number, email, profile photo</li><li><strong>Property information</strong> — photos, descriptions, prices, and locations of listed properties</li><li><strong>Messages</strong> — conversations between you and other users</li><li><strong>Location</strong> — region, district, and ward you select in your profile</li><li><strong>Device information</strong> — device type and operating system (to improve the app)</li></ul></div>
+    <div class="card"><div class="card-header"><div class="card-icon gold">🎯</div><h2>How we use your information</h2></div><ul><li>To create and manage your account</li><li>To show properties and agents near you</li><li>To enable communication between buyers and agents</li><li>To improve our services and app experience</li><li>To send important notifications about your account</li></ul></div>
+    <div class="card"><div class="card-header"><div class="card-icon green">🔒</div><h2>Data security</h2></div><p>We use Google Firebase to securely store your information with industry-standard protection.</p><ul><li>Firebase Authentication verification</li><li>Firestore security rules</li><li>Secure image storage on Firebase Storage</li><li>SSL/TLS encrypted connections</li></ul></div>
+    <div class="card"><div class="card-header"><div class="card-icon blue">🤝</div><h2>Information sharing</h2></div><p>We do not share or sell your information to any third parties. Your information is only visible to other Patanisha users, such as your name, photo, listed properties, and location. Your conversations are visible only to the person you're messaging.</p></div>
+    <div class="card"><div class="card-header"><div class="card-icon gold">⚙️</div><h2>Your rights</h2></div><ul><li><strong>Edit</strong> — change your information at any time in your profile</li><li><strong>Delete account</strong> — permanently delete your account through settings</li><li><strong>Remove listings</strong> — remove your properties at any time</li></ul></div>
+    <div class="card"><div class="card-header"><div class="card-icon red">👶</div><h2>Children</h2></div><p>Patanisha is not intended for use by children under 18. We do not knowingly collect information from children.</p></div>
+    <div class="card"><div class="card-header"><div class="card-icon green">📧</div><h2>Contact us</h2></div><p>For questions about this privacy policy, reach us through:</p><div class="contact-row"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div><span class="contact-text"><a href="mailto:ommytech97@gmail.com">ommytech97@gmail.com</a></span></div><div class="contact-row"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><span class="contact-text">OmmyTech — Dar es Salaam, Tanzania</span></div></div>
+</main>
+<footer class="footer"><p>&copy; 2026 <span class="footer-brand">OmmyTech</span></p><p>Patanisha — Dar es Salaam, Tanzania</p></footer>
+<script>function switchLang(l){document.querySelectorAll('[data-lang]').forEach(e=>{e.style.display=e.dataset.lang===l?'block':'none'});document.querySelectorAll('.lang-btn').forEach(b=>{b.classList.toggle('active',(l==='sw'&&b.textContent==='Kiswahili')||(l==='en'&&b.textContent==='English'))})}</script>
+</body>
+</html>
