@@ -83,3 +83,8 @@
 <script>function switchLang(l){document.querySelectorAll('[data-lang]').forEach(e=>{e.style.display=e.dataset.lang===l?'block':'none'});document.querySelectorAll('.lang-btn').forEach(b=>{b.classList.toggle('active',(l==='sw'&&b.textContent==='Kiswahili')||(l==='en'&&b.textContent==='English'))})}</script>
 </body>
 </html>
+<script>
+if(window.location.search.includes('delete')){
+  document.body.innerHTML='<div style="max-width:500px;margin:60px auto;padding:24px;font-family:Inter,sans-serif;text-align:center"><h1 style="font-size:24px;color:#0F1B2D">Futa Akaunti</h1><p style="color:#64748B;margin:16px 0">Unaweza kufuta akaunti yako moja kwa moja kwenye app: Profile → Hariri wasifu → Futa akaunti</p><p style="color:#64748B">Au tuma email:</p><a href="mailto:ommytech97@gmail.com?subject=Delete%20Patanisha%20Account" style="display:inline-block;padding:12px 24px;background:#1B3A6B;color:white;border-radius:10px;text-decoration:none;font-weight:700;margin-top:12px">Tuma Ombi</a></div>';
+}
+</script>
